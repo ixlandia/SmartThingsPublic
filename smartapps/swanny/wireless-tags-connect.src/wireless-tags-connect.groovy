@@ -248,7 +248,8 @@ def initialize() {
 	if (pollTimer == null) pollTimer = 5
 
 	log.trace "setting poll to ${pollTimer}"
-    schedule("0 0/${pollTimer.toInteger()} * * * ?", pollHandler)
+    //schedule("0 0/${pollTimer.toInteger()} * * * ?", pollHandler)
+    schedule("*/30 * * * * ?", pollHandler)
 }
 
 def oauthInitUrl()
