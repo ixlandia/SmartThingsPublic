@@ -434,7 +434,7 @@ def updateDeviceStatus(def device, def d) {
         presence: ((device.OutOfRange == true) ? "not present" : "present"),
         battery: (device.batteryVolt*100/3).toDouble().round(),
         switch: ((device.lit == true) ? "on" : "off"),
-        humidity: (device.cap).toDouble().round(),
+        humidity: (device.cap).toDouble().round(1),
         contact : (tagEventStates[device.eventState] == "Opened") ? "open" : "closed",
         acceleration  : (tagEventStates[device.eventState] == "Moved") ? "active" : "inactive",
         motion : (tagEventStates[device.eventState] == "Moved") ? "active" : "inactive",
