@@ -218,6 +218,6 @@ def getTemperature(value) {
 	if(getTemperatureScale() == "C"){
 		return celsius
 	} else {
-		return celsiusToFahrenheit(celsius) as Integer
+		return celsiusToFahrenheit(celsius).toDouble().round(1)
 	}
 }
